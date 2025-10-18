@@ -1,0 +1,134 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 100;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.logo .dot {
+  color: #e63946;
+}
+
+/* Nav links (desktop) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #e63946;
+}
+
+/* Right section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-btn {
+  text-decoration: none;
+  border: 1px solid #333;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #333;
+  color: white;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Hamburger button (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* ---------------------- */
+/* ✅ Mobile Responsiveness */
+/* ---------------------- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 24px;
+  }
+
+  /* Show hamburger on mobile */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hide right section on mobile */
+  .nav-right {
+    display: none;
+  }
+
+  /* Hide links by default */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 20px 0;
+    gap: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    z-index: 99;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  /* Show menu when active */
+  .nav-links.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-links li a {
+    font-size: 18px;
+    padding: 8px 20px;
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+}

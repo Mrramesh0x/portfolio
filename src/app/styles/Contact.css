@@ -1,0 +1,98 @@
+.contact-section {
+  padding: 100px 40px;
+  background-color: #fff;
+  text-align: center;
+  margin-top: -120px;
+  height: 580px;
+}
+
+.contact-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+}
+
+.contact-subtitle {
+  color: #555;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+  background: #fafafa;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+  font-weight: 500;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #000;
+}
+
+.submit-btn {
+  background: #000;
+  color: #fff;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #333;
+}
+
+.contact-socials {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  
+}
+
+.contact-socials a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-socials a:hover {
+  color: #e63946;
+}
+@media(max-width:768px) {
+  .contact-section{
+    height: 20px;
+  }
+.contact-socials{
+  height: 150px;
+}
+}

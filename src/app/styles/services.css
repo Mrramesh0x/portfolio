@@ -1,0 +1,157 @@
+.services-section {
+  padding: 100px 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.services-subtitle {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Services Container */
+.services-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Service Card */
+.service-card {
+  flex: 0 0 280px;
+  background-color: #fafafa;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ---------------------- */
+/* ✅ Mobile Responsive */
+/* ---------------------- */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .services-section {
+    padding: 80px 30px;
+  }
+
+  .services-title {
+    font-size: 28px;
+  }
+
+  .services-subtitle {
+    font-size: 15px;
+    max-width: 600px;
+    margin-bottom: 40px;
+  }
+
+  .service-card {
+    flex: 0 0 240px;
+    padding: 25px 18px;
+  }
+
+  .service-icon {
+    font-size: 36px;
+  }
+
+  .service-card h3 {
+    font-size: 17px;
+  }
+
+  .service-card p {
+    font-size: 13px;
+  }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 60px 20px;
+  }
+
+  .services-title {
+    font-size: 26px;
+  }
+
+  .services-subtitle {
+    font-size: 14px;
+    max-width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .service-card {
+    flex: 0 0 200px;
+    padding: 20px 15px;
+  }
+
+  .service-icon {
+    font-size: 32px;
+  }
+
+  .service-card h3 {
+    font-size: 16px;
+  }
+
+  .service-card p {
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .services-section {
+    padding: 50px 15px;
+  }
+
+  .service-card {
+    flex: 0 0 180px;
+  }
+
+  .service-icon {
+    font-size: 28px;
+  }
+
+  .service-card h3 {
+    font-size: 15px;
+  }
+
+  .service-card p {
+    font-size: 11px;
+  }
+}

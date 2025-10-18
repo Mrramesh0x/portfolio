@@ -1,0 +1,186 @@
+.projects-section {
+  padding: 100px 60px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  min-height: 450px; /* ✅ changed from fixed height */
+  margin-top:20px;
+}
+
+/* Section Title */
+.projects-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 60px;
+  position: relative;
+  display: inline-block;
+}
+
+.projects-title::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+}
+
+/* Horizontal Scroll Container */
+.projects-container {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 25px;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.projects-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #bbb, #999);
+  border-radius: 10px;
+}
+
+.projects-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #888, #555);
+}
+
+/* Project Card */
+.project-card {
+  flex: 0 0 320px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.35s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.project-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* Card Info */
+.project-info {
+  padding: 20px 24px 30px;
+  text-align: left;
+}
+
+.project-info h3 {
+  font-size: 20px;
+  color: #111;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+/* Button */
+.project-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 114, 255, 0.25);
+}
+
+.project-btn:hover {
+  background: linear-gradient(90deg, #005ce6, #00a3cc);
+  box-shadow: 0 6px 16px rgba(0, 114, 255, 0.35);
+}
+
+/* ---------------------- */
+/* ✅ Mobile Responsive */
+/* ---------------------- */
+@media (max-width: 1024px) {
+  .projects-section {
+    padding: 80px 40px;
+  }
+
+  .project-card {
+    flex: 0 0 280px;
+  }
+  .projects-container{
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 60px 20px;
+  }
+
+  .projects-title {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  .projects-title::after {
+    width: 160px;
+  }
+
+  .project-card {
+    flex: 0 0 260px;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+
+  .project-info h3 {
+    font-size: 17px;
+  }
+
+  .project-info p {
+    font-size: 13px;
+  }
+
+  .project-btn {
+    font-size: 13px;
+    padding: 8px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 50px 15px;
+  }
+
+  .project-card {
+    flex: 0 0 230px;
+  }
+
+  .projects-title {
+    font-size: 22px;
+  }
+}
