@@ -14,8 +14,8 @@ const projects = [
     id: 2,
     title: "E-commerce App",
     description: "Online shopping platform with cart and checkout features.",
-    image: "/projects.png",
-    link: "#",
+    image: "/freshcart.png",
+    link: "https://freshcart-grocery.vercel.app",
   },
   {
     id: 3,
