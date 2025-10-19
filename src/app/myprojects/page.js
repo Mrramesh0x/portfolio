@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Image from "next/image";
 
 const projects = [
@@ -36,38 +36,41 @@ const projects = [
 ];
 
 const Projects = () => {
-
-
   return (
     <section id="work" className="projects-section">
       <h2 className="projects-title">My Projects</h2>
+
+      {/* 🔥 Outer container (viewport) */}
       <div className="projects-container">
-        {projects.map((project) => (
-          <div className="project-card" key={project.id}>
-            <Image
-              src={project.image}
-              alt={project.title}
-              width={300}
-              height={300}
-              className="project-image"
-            />
-            <div className="project-info">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-btn"
-              >
-                View Project →
-              </a>
+        {/* 🔁 Inner scrolling wrapper (duplicated list for infinite effect) */}
+        <div className="projects-scroll-wrapper">
+          {projects.concat(projects).map((project, index) => (
+            <div className="project-card" key={index}>
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={300}
+                height={300}
+                className="project-image"
+              />
+              <div className="project-info">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-btn"
+                >
+                  View Project →
+                </a>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
-}
+};
 
 export default Projects;

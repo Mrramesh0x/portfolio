@@ -13,11 +13,14 @@
 }
 
 .profile-img {
-  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;        /* ✅ perfect circle */
+  object-fit: cover;         /* keeps face visible, fills circle */
+  object-position: top center;
+  border: 3px solid rgba(0, 0, 0, 0.676);
   margin-bottom: 20px;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
+  transition: all 0.3s ease; /* smooth scaling */
 }
 
 .intro-text {
@@ -73,20 +76,20 @@
 }
 
 /* ---------------------- */
-/* ✅ Mobile Responsiveness */
+/* ✅ Mobile Responsive Fix */
 /* ---------------------- */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
-    height: 240px;
     padding: 60px 20px;
     margin-top: 0;
+    height: 100px;
   }
 
   .profile-img {
-    width: 100px;
-    height: 140px;
-    margin-bottom: 10px;
+    width: 120px;         /* same width/height keeps circle */
+    height: 120px;
+    margin-bottom: 15px;
   }
 
   .intro-text {
@@ -104,13 +107,28 @@
   }
 
   .hero-buttons {
-    flex-direction:row ;
+    flex-direction: row;
     gap: 12px;
+    flex-wrap: wrap;
   }
 
   .btn {
-    width: 30%;
-    padding: 10px 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .main-heading {
+    font-size: 24px;
+  }
+
+  .intro-text {
     font-size: 15px;
   }
 }

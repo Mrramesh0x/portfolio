@@ -1,17 +1,16 @@
 import React from "react";
-import Image from "next/image";
 
 
 const Hero = () => {
   return (
     <section id="home" className="hero">
       <div className="hero-content">
-        <Image
+   <img
           src="/profile.jpg"
           alt="Profile Photo"
+          className="profile-img"
           width={100}
           height={100}
-          className="profile-img"
         />
         <p className="intro-text">Hi! I'm Sanket Kashyap 👋</p>
         <h1 className="main-heading">
