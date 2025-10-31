@@ -90,9 +90,9 @@ textarea:focus {
 }
 @media(max-width:768px) {
   .contact-section{
-    height: 20px;
+    height: 10px;
   }
 .contact-socials{
-  height: 150px;
+  height: 50px;
 }
 }

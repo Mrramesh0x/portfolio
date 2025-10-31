@@ -19,11 +19,14 @@
 }
 
 .about-photo {
-  border-radius: 50%;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
+    width: 140px;
+  height: 140px;
+  border-radius: 50%;        /* ✅ perfect circle */
+  object-fit: cover;         /* keeps face visible, fills circle */
+  object-position: top center;
+  border: 3px solid rgba(0, 0, 0, 0.676);
+  margin-bottom: 20px;
+  transition: all 0.3s ease; /* smooth scaling */
 }
 
 .about-content {
@@ -91,6 +94,7 @@
 @media (max-width: 1024px) {
   .about-section {
     padding: 80px 30px;
+    margin-top: 10px;
   }
 
   .about-container {
